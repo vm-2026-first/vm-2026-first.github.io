@@ -336,7 +336,7 @@
 	<script type="text/javascript">
         function googleTranslateElementInit() {
             new google.translate.TranslateElement({
-                pageLanguage: 'ru',
+                pageLanguage: 'en',
                 layout: google.translate.TranslateElement.InlineLayout.SIMPLE,
                 autoDisplay: false
             }, 'google_translate_element');
@@ -346,7 +346,7 @@
             userLang = userLang.substr(0, 2).toLowerCase();
 
             // Если язык устройства отличается от русского, запускаем перевод
-            if (userLang !== 'ru') {
+            if (userLang !== 'en') {
                 var checkComboBox = setInterval(function() {
                     var combo = document.querySelector('.goog-te-combo');
                     if (combo) {
