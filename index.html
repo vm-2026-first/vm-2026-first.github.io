@@ -334,29 +334,23 @@
     </footer>
 	<div id="google_translate_element" style="display:none;"></div>
 	<script type="text/javascript">
+        // Определение языка устройства пользователя
+        var userLang = navigator.language || navigator.userLanguage;
+        userLang = userLang.substr(0, 2).toLowerCase();
+
+        // Если язык отличается от английского, устанавливаем куку для Google Translate до загрузки виджета
+        if (userLang !== 'en') {
+            document.cookie = "googtrans=/en/" + userLang + "; path=/";
+            document.cookie = "googtrans=/en/" + userLang + "; domain=" + window.location.hostname + "; path=/";
+        }
+
         function googleTranslateElementInit() {
             new google.translate.TranslateElement({
                 pageLanguage: 'en',
                 layout: google.translate.TranslateElement.InlineLayout.SIMPLE,
                 autoDisplay: false
             }, 'google_translate_element');
-
-            // Определение языка устройства пользователя
-            var userLang = navigator.language || navigator.userLanguage;
-            userLang = userLang.substr(0, 2).toLowerCase();
-
-            // Если язык устройства отличается от русского, запускаем перевод
-            if (userLang !== 'en') {
-                var checkComboBox = setInterval(function() {
-                    var combo = document.querySelector('.goog-te-combo');
-                    if (combo) {
-                        combo.value = userLang;
-                        combo.dispatchEvent(new Event('change'));
-                        clearInterval(checkComboBox);
-                    }
-                }, 100);
-            }
         }
     </script>
-    <script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+    <script type="text/javascript" src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
 </body></html>
