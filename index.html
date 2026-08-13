@@ -113,6 +113,29 @@
             display: block;
             background: #111;
         }
+        .how-work-row {
+            display: flex;
+            gap: 30px;
+            margin-bottom: 40px;
+            flex-wrap: wrap;
+        }
+        .how-work-col {
+            flex: 1;
+            min-width: 280px;
+            display: flex;
+            gap: 20px;
+            align-items: flex-start;
+        }
+        .how-work-col .category-shot {
+            width: 160px;
+        }
+        .how-work-col .item p {
+            text-align: left;
+        }
+        .how-work-col .item strong {
+            display: block;
+            margin-bottom: 6px;
+        }
         .download-btn {
             display: inline-block;
             background-color: #ffd966;
@@ -268,6 +291,16 @@
                 width: 160px;
                 margin: 0 auto;
             }
+            .how-work-row {
+                flex-direction: column;
+            }
+            .how-work-col {
+                flex-direction: column;
+                align-items: center;
+            }
+            .how-work-col .category-shot {
+                margin: 0 auto;
+            }
         }
 		
     </style>
@@ -351,13 +384,23 @@
 
             <h2>• • • how it work</h2>
 
-            <div class="category">
-                <div class="category-shot">
-                    <img src="./index_files/start.jpg" alt="Start screen">
-                </div>
-                <div class="category-content">
+            <div class="how-work-row">
+                <div class="how-work-col">
+                    <div class="category-shot">
+                        <img src="./index_files/start.jpg" alt="Start screen">
+                    </div>
                     <div class="item">
-                        <p><strong>Start screen:</strong> Here you can start working with the app, set up themes, go to this website and disable ads.</p>
+                        <p><strong>Start screen:</strong>
+                        Here you can start working with the app, set up themes, go to this website and disable ads.</p>
+                    </div>
+                </div>
+                <div class="how-work-col">
+                    <div class="category-shot">
+                        <img src="./index_files/1-libraries.jpg" alt="Libraries screen">
+                    </div>
+                    <div class="item">
+                        <p><strong>Libraries screen:</strong>
+                        Here you can create a library, select an already created library and start working with it.</p>
                     </div>
                 </div>
             </div>
