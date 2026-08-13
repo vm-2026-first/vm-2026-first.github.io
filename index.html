@@ -1,1 +1,453 @@
-PLACEHOLDER
+<!DOCTYPE html>
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    
+    <meta name="plainAR" content="width=device-width, initial-scale=1.0">
+    <title>PlainAR</title>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+        body {
+            font-family: 'Montserrat', sans-serif;
+            line-height: 1.6;
+            color: #ffffff;
+            background-color: #000736;
+        }
+        header {
+            padding: 20px 0;
+            text-align: center;
+        }
+        header .header-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            max-width: 80%;
+            margin: 0 auto;
+            padding: 20px 0;
+        }
+        nav {
+            text-align: center;
+        }
+        .container {
+            width: 90%;
+            max-width: 1100px;
+            margin: 20px auto;
+            overflow: hidden;
+        }
+        main {
+            padding: 20px;
+            margin-bottom: 20px;
+            border-radius: 5px;
+        }
+        main h2 {
+            text-align: left;
+            margin-bottom: 30px;
+            font-size: 24px;
+        }
+        .category {
+            display: flex;
+            gap: 30px;
+            align-items: flex-start;
+            margin-bottom: 40px;
+            flex-wrap: wrap;
+        }
+        .category-content {
+            flex: 1;
+            min-width: 280px;
+        }
+        .category h3 {
+            color: #ffd966;
+            font-size: 20px;
+            margin-bottom: 15px;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+            padding-bottom: 5px;
+        }
+        .item {
+            margin-bottom: 15px;
+        }
+        .item p {
+            text-align: justify;
+        }
+        .item strong {
+            color: #ffd966;
+        }
+        .category-video {
+            flex-shrink: 0;
+            width: 200px;
+        }
+        .category-video iframe {
+            width: 100%;
+            height: 356px;
+            border: none;
+            border-radius: 12px;
+            background: #111;
+        }
+        .category-video-placeholder {
+            width: 200px;
+            height: 356px;
+            border-radius: 12px;
+            background: rgba(255, 255, 255, 0.05);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: rgba(255, 255, 255, 0.3);
+            font-size: 13px;
+            text-align: center;
+            padding: 10px;
+        }
+        .category-shot {
+            flex-shrink: 0;
+            width: 180px;
+        }
+        .category-shot img {
+            width: 100%;
+            height: auto;
+            border-radius: 12px;
+            display: block;
+            background: #111;
+        }
+        .download-btn {
+            display: inline-block;
+            background-color: #ffd966;
+            color: #000736;
+            text-decoration: none;
+            padding: 8px 16px;
+            font-size: 14px;
+            font-weight: bold;
+            border-radius: 20px;
+            transition: background-color 0.3s ease;
+            white-space: nowrap;
+        }
+        .download-btn:hover {
+            background-color: #f1c232;
+        }
+        footer {
+            text-align: center;
+            padding: 14px;
+            margin-top: 18px;
+        }
+        details {
+            margin-top: 15px;
+            text-align: left;
+            max-width: 800px;
+            margin-left: auto;
+            margin-right: auto;
+            cursor: pointer;
+        }
+        summary {
+            font-size: 12px;
+            text-align: center;
+            font-weight: normal;
+            color: #ffffff;
+            outline: none;
+        }
+        .policy-content {
+            margin-top: 15px;
+            font-size: 14px;
+            background: rgba(255, 255, 255, 0.05);
+            padding: 20px;
+            border-radius: 5px;
+            cursor: default;
+        }
+        .policy-content h3 {
+            margin-top: 15px;
+            margin-bottom: 5px;
+            font-size: 16px;
+        }
+        .policy-content p {
+            margin-bottom: 10px;
+            text-align: left;
+        }
+		.info-block {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 25px;
+            margin: 40px auto 20px auto;
+            max-width: 800px;
+            flex-wrap: wrap;
+        }
+        .print-btn {
+            display: inline-block;
+            background-color: #ffd966;
+            color: #000736;
+            text-decoration: none;
+            padding: 10px 20px;
+            font-size: 14px;
+            font-weight: bold;
+            border-radius: 20px;
+            transition: background-color 0.3s ease;
+            white-space: nowrap;
+        }
+        .print-btn:hover {
+            background-color: #f1c232;
+        }
+        .info-img {
+            max-width: 120px;
+            height: auto;
+            border-radius: 12px;
+        }
+        .info-text {
+            font-size: 16px;
+            line-height: 1.5;
+            text-align: left;
+            flex: 1;
+            min-width: 250px;
+        }
+		.practice-btn {
+            display: inline-block;
+            background-color: #ffd966;
+            color: #000736;
+            text-decoration: none;
+            padding: 10px 20px;
+            font-size: 14px;
+            font-weight: bold;
+            border-radius: 20px;
+            transition: background-color 0.3s ease;
+            white-space: nowrap;
+        }
+        .practice-btn:hover {
+            background-color: #f1c232;
+        }
+		.goog-te-banner-frame.skiptranslate, .goog-te-gadget-icon {
+            display: none !important;
+        }
+        body {
+            top: 0 !important;
+        }
+        .goog-text-highlight {
+            background-color: transparent !important;
+            box-shadow: none !important;
+        }
+		
+		.social-links {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin-bottom: 20px;
+}
+.social-links a {
+    color: #ffffff;
+    transition: color 0.3s ease, transform 0.3s ease;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+}
+.social-links a:hover {
+    color: #ffd966;
+    transform: translateY(-2px);
+}
+.social-links svg {
+    width: 28px;
+    height: 28px;
+}
+
+        @media (max-width: 700px) {
+            .category {
+                flex-direction: column;
+            }
+            .category-video,
+            .category-video-placeholder {
+                width: 180px;
+                margin: 0 auto;
+            }
+            .category-video iframe {
+                height: 320px;
+            }
+            .category-video-placeholder {
+                height: 320px;
+            }
+            .category-shot {
+                width: 160px;
+                margin: 0 auto;
+            }
+        }
+		
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="header-container">
+            <h1><img src="./index_files/plainAR_logo_white.png" alt="PlainAR" style="max-height: 60px; vertical-align: middle;"></h1>
+            <a href="https://play.google.com/store/apps/details?id=com.proba.plainar&pli=1" target="_blank" class="download-btn">Download app</a>
+        </div>
+    </header>
+
+    <nav style="color: #ffd966; padding: 15px 20px; font-size: 22px;">
+        Create Your own unique augmented reality<br>
+        <span style="font-size: 26px;font-weight: bold;"> without using programming</span>
+    </nav>
+
+    <div class="container">
+        <main>
+            <h2>... how to use</h2>
+            
+            <div class="category">
+                <div class="category-video-placeholder">Video soon</div>
+                <div class="category-content">
+                    <h3>Entertainment, Holidays, and Games</h3>
+                    <div class="item">
+                        <p><strong>Home Quests (Scavenger Hunts):</strong> Users can organize a quest for children, their significant other, or friends. Cards with figures (markers) are pasted or placed around the house. By pointing the camera, the player receives text clues or picture maps that lead to the next point or a hidden gift.</p>
+                    </div>
+                    <div class="item">
+                        <p><strong>Living Cards and Photo Albums:</strong> You can give a loved one a regular card with a specific figure (or design element) drawn on it. When you point the camera at the PlainAR card, it "comes to life"—a hidden text greeting, a poem, or a memorable family photo appears.</p>
+                    </div>
+                    <div class="item">
+                        <p><strong>Interactive Board Games (DIY):</strong> Board game enthusiasts can create their own cards. Pointing a smartphone at a figure on a map or character card can instantly reveal its hidden stats, spells, or location descriptions.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="category">
+                <div class="category-video">
+                    <iframe src="https://www.youtube.com/embed/91TxBJqlHoM" title="Home and Space Organization" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen loading="lazy"></iframe>
+                </div>
+                <div class="category-content">
+                    <h3>Home and Space Organization (DIY Smart Home)</h3>
+                    <div class="item">
+                        <p><strong>Marking Boxes and Storage Systems:</strong> Dozens of identical boxes are often stored in a pantry, closet, or garage. By attaching shape markers to them, PlainAR can be used to "scan" the boxes on shelves and instantly display a text list of what's inside or a photo of the contents. No need to open or rummage through anything.</p>
+                    </div>
+                    <div class="item">
+                        <p><strong>Interactive Refrigerator:</strong> Instead of traditional magnets, use shape markers. By pointing the camera at them, family members can leave each other shopping lists, reminders, or sweet notes.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="category">
+                <div class="category-video-placeholder">Video soon</div>
+                <div class="category-content">
+                    <h3>Children and Creativity</h3>
+                    <div class="item">
+                        <p><strong>Educational Flashcards for Children:</strong> Parents can create interactive flashcards for learning languages, counting, or the names of objects. The child sees a geometric shape, points the phone at it, and learns the word (an animal picture or text appears on the screen).</p>
+                    </div>
+                    <div class="item">
+                        <p><strong>Bringing Children's Drawings to Life:</strong> If a child has drawn a house with clear geometric shapes (a triangular roof, a square window), parents can associate "residents" or fairytale text with these shapes. For the child, it will feel like real magic.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="category">
+                <div class="category-video">
+                    <iframe src="https://www.youtube.com/embed/RkKrgDhZRXo" title="Social interaction and community" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen loading="lazy"></iframe>
+                </div>
+                <div class="category-content">
+                    <h3>Social interaction and community</h3>
+                    <div class="item">
+                        <p><strong>Secret message exchange:</strong> Friends can share library files and wander around the city, like in a spy movie, reading hidden messages.</p>
+                    </div>
+                    <div class="item">
+                        <p><strong>Enthusiast tours:</strong> Enthusiasts can create AR tours of their neighborhood or park and share these libraries on social media.</p>
+                    </div>
+                </div>
+            </div>
+
+            <h2>• • • how it work</h2>
+
+            <div class="category">
+                <div class="category-shot">
+                    <img src="./index_files/start.jpg" alt="Start screen">
+                </div>
+                <div class="category-content">
+                    <div class="item">
+                        <p><strong>Start screen:</strong> Here you can start working with the app, set up themes, go to this website and disable ads.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="info-block">
+                <img src="./index_files/position.png" alt="Position" class="info-img">
+                <div class="info-text">
+                    Recommended marker position during recognition <br>
+                    to obtain the most accurate results
+                </div>
+                <a href="https://drive.google.com/file/d/1N7swONQXnkrXGCI85iNpI4R7WVsTFqcR/view?usp=sharing" target="_blank" class="print-btn">markers for print</a>
+            </div>
+
+            <div class="info-block" style="margin-top: 20px;">
+                <div class="info-text">
+                    Download library "Test" and practice recognizing.
+                </div>
+                <a href="Test.plainar" download="Test.plainar" class="practice-btn">Download library</a>
+            </div>
+	
+         </main>
+    </div>
+
+    <footer><br>
+		
+		<div class="social-links">
+    <a href="https://www.youtube.com/@PlainAR-vm" target="_blank" rel="noopener" aria-label="YouTube">
+        <svg viewBox="0 0 24 24"><path fill="currentColor" d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg>
+    </a>
+    <a href="https://www.instagram.com/plainar_vm" target="_blank" rel="noopener" aria-label="Instagram">
+        <svg viewBox="0 0 24 24"><path fill="currentColor" d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
+    </a>
+    <a href="https://www.tiktok.com/@plainar.app" target="_blank" rel="noopener" aria-label="TikTok">
+        <svg viewBox="0 0 24 24"><path fill="currentColor" d="M12.525.02c1.31-.02 2.61-.01 3.91-.02.08 1.53.63 3.09 1.75 4.17 1.12 1.11 2.7 1.62 4.24 1.79v4.03c-1.44-.05-2.89-.35-4.2-.97-.57-.26-1.1-.59-1.62-.93-.01 2.92.01 5.84-.02 8.75-.08 1.4-.54 2.79-1.35 3.94-1.31 1.92-3.58 3.17-5.91 3.21-1.43.08-2.86-.31-4.08-1.03-2.02-1.19-3.44-3.37-3.65-5.71-.02-.5-.03-1-.01-1.49.18-1.9 1.12-3.72 2.58-4.96 1.66-1.44 3.98-2.13 6.15-1.72.02 1.48-.04 2.96-.04 4.44-.99-.32-2.15-.23-3.02.37-.82.56-1.31 1.53-1.28 2.53.02 1.01.59 1.94 1.47 2.41.87.48 1.95.45 2.8-.07.82-.5 1.34-1.41 1.38-2.37.05-3.81.02-7.62.03-11.43.01-.1.01-.2 0-.3z"/></svg>
+    </a>
+</div>
+		
+        <p>© 2026 [-vm-]. All rights reserved.</p>
+        
+        <details>
+            <summary>Privacy Policy for PlainAR &nbsp; - &nbsp; Last updated: May 25, 2026</summary>
+            <div class="policy-content">
+                <p>This Privacy Policy describes how the PlaiAR application ("we," "our," or "the app") collects, uses, and protects your information.</p>
+                
+                <h3>1. Information Collection and Use</h3>
+                <p>We are committed to providing the best possible Augmented Reality (AR) experience. We may collect the following types of data:</p>
+                <p><strong>Camera Data:</strong> Access to the camera is required exclusively to enable AR features in real-time. We do not store or transmit your photos or videos to external servers, unless this is explicitly required for a specific app feature (e.g., saving a result to your device).</p>
+                <p><strong>Technical Information:</strong> We may collect information about your device (model, OS version) to optimize the app's performance.</p>
+                <p><strong>Location Data:</strong> We do not collect location data.</p>
+
+                <h3>2. How We Use Your Data</h3>
+                <p>The information collected is used solely for the following purposes:</p>
+                <p>- Providing and operating the AR features.<br>
+                   - Improving the performance, stability, and security of the application.<br>
+                   - Analyzing technical errors and crashes to improve user experience.</p>
+
+                <h3>3. Third-Party Sharing</h3>
+                <p>We do not sell or trade your personal data to third parties. We may use third-party analytics services (such as Google Analytics/Firebase) to help us understand how users interact with the app. These services process data in accordance with their own privacy policies.</p>
+
+                <h3>4. Your Rights</h3>
+                <p>You have the following rights regarding your data:</p>
+                <p><strong>Permissions:</strong> You can revoke access to the camera or other sensors at any time via your device settings.</p>
+                <p><strong>Data Deletion:</strong> You can delete any data stored locally on your device by uninstalling the application.</p>
+
+                <h3>5. Changes to This Privacy Policy</h3>
+                <p>We may update this Privacy Policy from time to time. We will notify you of any changes by updating the "Last updated" date in this policy or via an in-app notice.</p>
+
+                <h3>6. Contact Us</h3>
+                <p>If you have any questions or suggestions regarding this Privacy Policy, please contact us at:<br>
+                <a href="mailto:plainarvm@gmail.com" style="color: #6d9eeb;">plainarvm@gmail.com</a></p>
+            </div>
+        </details>
+    </footer>
+	<div id="google_translate_element" style="display:none;"></div>
+	<script type="text/javascript">
+        var userLang = navigator.language || navigator.userLanguage;
+        userLang = userLang.substr(0, 2).toLowerCase();
+
+        if (userLang !== 'en') {
+            document.cookie = "googtrans=/en/" + userLang + "; path=/";
+            document.cookie = "googtrans=/en/" + userLang + "; domain=" + window.location.hostname + "; path=/";
+        }
+
+        function googleTranslateElementInit() {
+            new google.translate.TranslateElement({
+                pageLanguage: 'en',
+                layout: google.translate.TranslateElement.inlineLayout.SIMPLE,
+                autoDisplay: false
+            }, 'google_translate_element');
+        }
+    </script>
+    <script type="text/javascript" src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+</body></html>
