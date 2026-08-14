@@ -28,9 +28,11 @@
             display: flex;
             justify-content: space-between;
             align-items: center;
-            max-width: 80%;
+            max-width: 90%;
             margin: 0 auto;
             padding: 20px 0;
+            gap: 15px;
+            flex-wrap: wrap;
         }
         nav {
             text-align: center;
@@ -170,6 +172,34 @@
         .download-btn:hover {
             background-color: #f1c232;
         }
+        .header-nav {
+            display: flex;
+            gap: 10px;
+            flex-wrap: wrap;
+            justify-content: center;
+            align-items: center;
+        }
+        .nav-btn {
+            display: inline-block;
+            background-color: #000736;
+            color: #ffffff;
+            text-decoration: none;
+            padding: 7px 14px;
+            font-size: 13px;
+            font-weight: bold;
+            border-radius: 20px;
+            border: 1px solid #ffffff;
+            transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease;
+            white-space: nowrap;
+        }
+        .nav-btn:hover {
+            background-color: #ffd966;
+            color: #000736;
+            border-color: #ffd966;
+        }
+        html {
+            scroll-behavior: smooth;
+        }
         footer {
             text-align: center;
             padding: 14px;
@@ -292,6 +322,15 @@
 }
 
         @media (max-width: 700px) {
+            .header-nav {
+                order: 3;
+                width: 100%;
+                justify-content: center;
+            }
+            .nav-btn {
+                font-size: 12px;
+                padding: 6px 10px;
+            }
             .category {
                 flex-direction: column;
             }
@@ -329,6 +368,11 @@
     <header>
         <div class="header-container">
             <h1><img src="./index_files/plainAR_logo_white.png" alt="PlainAR" style="max-height: 60px; vertical-align: middle;"></h1>
+            <div class="header-nav">
+                <a href="#how-to-use" class="nav-btn">how to use</a>
+                <a href="#how-it-work" class="nav-btn">how it work</a>
+                <a href="#additional-materials" class="nav-btn">additional materials</a>
+            </div>
             <a href="https://play.google.com/store/apps/details?id=com.proba.plainar&pli=1" target="_blank" class="download-btn">Download app</a>
         </div>
     </header>
@@ -340,7 +384,7 @@
 
     <div class="container">
         <main>
-            <h2>... how to use</h2>
+            <h2 id="how-to-use">... how to use</h2>
             
             <div class="category">
                 <div class="category-video-placeholder">Video soon</div>
@@ -401,7 +445,7 @@
                 </div>
             </div>
 
-            <h2>• • • how it work</h2>
+            <h2 id="how-it-work">• • • how it work</h2>
 
             <div class="how-work-row">
                 <div class="how-work-col">
@@ -472,7 +516,7 @@
                 </div>
             </div>
 
-            <h2>• • • additional materials</h2>
+            <h2 id="additional-materials">• • • additional materials</h2>
 
             <div class="info-block" style="flex-direction: column; align-items: flex-start; gap: 16px;">
                 <div style="display: flex; gap: 15px; flex-wrap: wrap; align-items: center;">
